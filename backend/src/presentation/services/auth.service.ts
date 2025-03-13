@@ -23,7 +23,7 @@ interface UserRegister {
     city_id: number;
 }
 interface UserLogin {
-    user_id:number;
+    user_id: number;
     name: string;
     last_name: string;
     email: string;
@@ -76,7 +76,7 @@ export class AuthService {
         if (!isMatch) return null;
 
         const token = jwt.sign({ userLogin }, SECRET_KEY, { expiresIn: "1h" });
-        return {token, userLogin};
+        return { token, userLogin };
     }
 
     public verifyToken(token: string) {
@@ -87,8 +87,8 @@ export class AuthService {
         }
     }
     public filterUserData = (user: any): UserLogin => {
-        const {user_id, name, last_name, email, dni, address, phone, birth_date, city_id } = user.dataValues;
-        return {user_id, name, last_name, email, dni, address, phone, birth_date, city_id };
+        const { user_id, name, last_name, email, dni, address, phone, birth_date, city_id } = user.dataValues;
+        return { user_id, name, last_name, email, dni, address, phone, birth_date, city_id };
     };
 
     public async verifyRegister(token: string, user: any) {
@@ -105,7 +105,7 @@ export class AuthService {
         if (!userUpdate) {
             throw new Error("Usuario no encontrado");
         }
-    
+
         // Actualizar estado del usuario
         await userUpdate.update({ status: true });
 
@@ -126,14 +126,14 @@ export class AuthService {
 
     public async generateAndSendOTP(userEmail: string, name: string): Promise<void> {
         const tokenOTP = generateCode();
-    
+
         // Crear el código OTP en la base de datos
         await OTP.create({
             token: tokenOTP,
             userEmail: userEmail,
             expiresAt: new Date(Date.now() + 10 * 60 * 1000), // Expira en 10 minutos
         });
-    
+
         // Enviar el OTP por correo electrónico
         await sendOTPtoEmail({
             name: name,

@@ -9,6 +9,7 @@ import { OTP } from "./OTP.model";
 import Transaction from "./transaction.model";
 import OperationType from "./operationType.model";
 import Operation from "./operation.model";
+import Card from "./card.model";
 
 export const initModels = (sequelize: Sequelize) => {
   AccountType.initModel(sequelize);
@@ -20,6 +21,7 @@ export const initModels = (sequelize: Sequelize) => {
   OperationType.initModel(sequelize)
   Operation.initModel(sequelize)
   Transaction.initModel(sequelize)
+  Card.initModel(sequelize)
 
   // Definir relaciones
   Account.belongsTo(AccountType, { foreignKey: "account_type_id" });
@@ -39,6 +41,12 @@ export const initModels = (sequelize: Sequelize) => {
 
   Transaction.belongsTo(Account, { foreignKey: "account_id" });
   Account.hasMany(Transaction, { foreignKey: "account_id" });
+
+  Card.belongsTo(Account, { foreignKey: "account_id" });
+  Account.hasMany(Card, { foreignKey: "account_id" });
+
+  Account.belongsTo(User, { foreignKey: "user_id" });
+  User.hasMany(Account, { foreignKey: "user_id" });
 
 
 };

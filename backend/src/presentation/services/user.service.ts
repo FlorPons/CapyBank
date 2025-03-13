@@ -39,33 +39,33 @@ export class UserService {
 
 
     public async getByID(id: any) {
-    return {
-        message: 'getByID ok',
-        id
+        return {
+            message: 'getByID ok',
+            id
+        }
     }
-}
 
     public async getByEmail(email: any) {
-    const res = await User.findOne({ where: { email } })
+        const res = await User.findOne({ where: { email } })
 
-    if (!res) throw new Error('Email no longer exists')
-    return res
-}
+        if (!res) throw new Error('Email no longer exists')
+        return res
+    }
 
     public async getByDni(dni: string) {
-    const res = await User.findOne({ where: { dni } })
+        const res = await User.findOne({ where: { dni } })
 
-    if (res) throw new Error('DNI already exists')
-    return
-}
+        if (res) throw new Error('DNI already exists')
+        return
+    }
 
     public async update(data: any) {
-    return 'update ok'
-}
+        return 'update ok'
+    }
 
     public async deleteByID(id: any) {
-    return 'deleteByID ok'
-}
+        return 'deleteByID ok'
+    }
 
 
 }

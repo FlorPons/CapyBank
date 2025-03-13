@@ -55,19 +55,19 @@ export class AuthController {
 
     login = (req: Request, res: Response) => {
         const { email, password } = req.body;
-    
+
         if (!email || !password) {
             throw new Error("Falta email o contraseña")
         }
-    
+
         this.authService.loginUser(email, password)
             .then((tokenAndUser) => {
                 if (!tokenAndUser) {
                     throw new Error("Credenciales incorrectas");
                 }
-    
+
                 const { token, userLogin } = tokenAndUser;
-    
+
                 res.cookie("token", token, {
                     httpOnly: true,
                     secure: false,
@@ -75,11 +75,11 @@ export class AuthController {
                 }).status(200).json({
                     message: "Autenticado",
                     user: {
-                        id_user:userLogin.user_id,
+                        id_user: userLogin.user_id,
                         email: userLogin.email,
                         name: userLogin.name,
                         last_name: userLogin.last_name,
-                        phone:userLogin.phone
+                        phone: userLogin.phone
                     }
                 });
             })
@@ -90,11 +90,11 @@ export class AuthController {
 
     verifyRegisterController = (req: Request, res: Response) => {
         const { token, user } = req.body;
-    
+
         if (!token || !user) {
             throw new Error("Faltan datos requeridos");
         }
-    
+
         this.authService.verifyRegister(token, user)
             .then((userCreated) => {
                 res.status(201).json(userCreated.message);
@@ -106,14 +106,14 @@ export class AuthController {
 
 
     sendingCode = (req: Request, res: Response) => {
-        const {email, name} = req.body;
+        const { email, name } = req.body;
         this.authService.generateAndSendOTP(email, name)
-        .then(() => {
-            res.status(201).json("Codigo enviado");
-        })
-        .catch((err) => {
-            res.status(500).json({ message: "Error al enviar el código", error: err.message });
-        });
+            .then(() => {
+                res.status(201).json("Codigo enviado");
+            })
+            .catch((err) => {
+                res.status(500).json({ message: "Error al enviar el código", error: err.message });
+            });
 
     }
 
