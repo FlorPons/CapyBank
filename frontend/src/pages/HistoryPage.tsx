@@ -16,11 +16,11 @@ const HistoryPage: React.FC = () => {
             </div>  
 
             {/* Charts */}
-            <main className="p-1 mx-1 flex grow-2">
-                <div className="w-[75%]">
+            <main className="p-1 mx-3 flex grow-2">
+                <div className="w-[70%]">
                     <TransactionHistory transactions={transactionsData} />
                 </div>
-                <div className="w-[25%]">
+                <div className="w-[30%] mx-1">
                     <AccountSummaryChart />
                 </div>
             </main>
@@ -33,4 +33,4 @@ const HistoryPage: React.FC = () => {
     );
 };
 
-export default HistoryPage;  
+export default HistoryPage;   
