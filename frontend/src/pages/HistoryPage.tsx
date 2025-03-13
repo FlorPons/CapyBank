@@ -11,22 +11,24 @@ const HistoryPage: React.FC = () => {
     return (  
         <div className="min-h-screen flex">  
             {/* Navbar a la izquierda */}  
-            <div className="w-[13rem] bg-white shadow-md">  
+            <div className="flex">  
                 <NavbarLeft />  
             </div>  
 
             {/* Charts */}
-            <div className="p-4 mx-2 flex grow-2">
-                <div className="flex-1 p-2">
+            <main className="p-1 mx-1 flex grow-2">
+                <div className="w-[75%]">
                     <TransactionHistory transactions={transactionsData} />
                 </div>
-                <div className="w-[15rem] p-2">
+                <div className="w-[25%]">
                     <AccountSummaryChart />
                 </div>
-            </div>
+            </main>
 
             {/* Sidebar a la derecha */}
-            <AsideBar />
+            <div className="flex">
+                <AsideBar />
+            </div>
         </div>
     );
 };
