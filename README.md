@@ -135,3 +135,5 @@ Pago de servicios básicos (Versión 2 - Roadmap).
 - [@Kevin Salinas - BACKEND](https://github.com/ksalinas652)
 - [@Mauro David Lezcano - FRONTEND](https://github.com/Maurolezcano81)
 - [@OrlandoCV - PM](https://github.com/orlando0107)
+
+[Descargar el PDF] (https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/CapyBank.pdf)
