@@ -136,4 +136,24 @@ Pago de servicios básicos (Versión 2 - Roadmap).
 - [@Mauro David Lezcano - FRONTEND](https://github.com/Maurolezcano81)
 - [@OrlandoCV - PM](https://github.com/orlando0107)
 
+# Mi documento en imágenes  
+
+## Página 1  
+![Página 1](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/1.svg)  
+## Página 2  
+![Página 2](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/2.svg)
+## Página 3  
+![Página 3](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/3.svg)
+## Página 4  
+![Página 4](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/4.svg)
+## Página 5  
+![Página 5](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/5.svg)
+## Página 6  
+![Página 6](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/6.svg)
+## Página 7  
+![Página 7](https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/Presentation/7.svg)
+
+
+
+
 [Descargar el PDF] (https://github.com/No-Country-simulation/s21-ft-01-webapp/blob/master/CapyBank.pdf)
