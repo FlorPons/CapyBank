@@ -80,7 +80,6 @@ export class AuthController {
                         name: userLogin.name,
                         last_name: userLogin.last_name,
                         phone:userLogin.phone,
-                        account_id:userLogin.account_id,
                         account_number:userLogin.account_number,
                         balance:userLogin.balance
                     }

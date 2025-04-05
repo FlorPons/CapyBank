@@ -13,7 +13,7 @@ import Logout from "../svg/Logout";
 
 const NavbarLeft = () => {
 
-    const itemsNavbar = [
+    const itemsNavbar = [ 
         {
             id: 1,
             title: "Inicio",
@@ -70,8 +70,8 @@ const NavbarLeft = () => {
     const location = useLocation();
 
     useEffect(() => {
-        setUrlActive(location.pathname)
-    }, [location.pathname])
+        setUrlActive(location.pathname);
+    }, [location.pathname]);
 
     return (
         <div className="bg-secondary w-[30%] min-h-screen px-4 py-8 flex flex-col lg:w-[15%] items-center justify-between">

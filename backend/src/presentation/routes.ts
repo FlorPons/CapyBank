@@ -6,6 +6,7 @@ import { AuthRoutes } from "./auth/routes";
 import { OperationTypeRoutes } from "./operationType/routes";
 import { OperationRoutes } from "./operation/routes";
 import { TransactionRoutes } from "./transaction/routes";
+import { TransferController } from "../presentation/transaction/transfer.controller"; 
 
 export class AppRoutes {
 

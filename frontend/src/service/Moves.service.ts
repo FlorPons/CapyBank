@@ -44,3 +44,4 @@ export const fetchTransactions = async (userId: number, month: Date) => {
         throw error;
     }
 };
+

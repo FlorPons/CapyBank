@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 interface NavbarItem {
     title: string,
-    children: ReactNode,
+    children: ReactNode, 
     to: string,
     isActive: boolean
 }

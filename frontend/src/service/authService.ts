@@ -15,7 +15,7 @@ export const register = async (data: RegisterUser): Promise<RegisterUser> => {
   }
 
   return responseJson;
-};
+}; 
 
 export const login = async (data: LoginCredentials): Promise<LoginResponse> => {
 

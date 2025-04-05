@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';  
 import { useNavigate } from 'react-router-dom';  
+<<<<<<< Updated upstream
 import Capycash from 'frontend/src/svgs/Capycash';  
+=======
+import Capycash from '../../svgs/capycash.svg';  
+>>>>>>> Stashed changes
 
 interface ModalTransferenciaProps {  
     isOpen: boolean;  
@@ -56,4 +60,8 @@ const ModalTransferencia: React.FC<ModalTransferenciaProps> = ({ isOpen, onClose
     );  
 };  
 
+<<<<<<< Updated upstream
 export default ModalTransferencia;  
+=======
+export default ModalTransferencia;  
+>>>>>>> Stashed changes

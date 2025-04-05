@@ -1,16 +1,18 @@
 export interface User {
-    id_user: number
-    name: string,
-    last_name: string,
-    email: string,
-    birth_date: Date,
-    phone: string,
-    country_id: number,
-    city_id: number,
-    dni: string,
-    dni_photo?: File | null,
-    password: string,
-    repeatPwd?: string
+    id_user: number;
+    name: string;
+    last_name: string;
+    email: string;
+    birth_date: Date;
+    phone: string;
+    country_id: number;
+    city_id: number;
+    dni: number;
+    dni_photo?: File | null;
+    password: string;
+    repeatPwd?: string;  
+    cvu: number;
+    account_id: number;
 }
 
 export interface LoginResponse {
@@ -20,7 +22,9 @@ export interface LoginResponse {
         name: string;
         last_name: string;
         email: string;
-        phone: string
+        phone: string;
+        account_id: number;
+        cvu: number;
     };
 }
 

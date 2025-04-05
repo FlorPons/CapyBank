@@ -5,11 +5,11 @@ class User extends Model {
     public name!: string;
     public last_name!: string;
     public email!: string;
-    public dni!: string;
+    public dni!: number;
     public dni_url!: string;
     public password!: string;
     public address!: string;
-    public phone!: string;
+    public phone!: number;
     public birth_date!: string;
     public status!: boolean;
     public city_id!: number;
@@ -35,7 +35,7 @@ class User extends Model {
                     allowNull: false,
                 },
                 dni: {
-                    type: DataTypes.STRING,
+                    type: DataTypes.INTEGER,
                     allowNull: false,
                 },
                 dni_url: {
@@ -52,7 +52,7 @@ class User extends Model {
                     allowNull: false,
                 },
                 phone: {
-                    type: DataTypes.STRING,
+                    type: DataTypes.INTEGER,
                     allowNull: false,
                 },
                 birth_date: {

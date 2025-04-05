@@ -42,16 +42,16 @@ const Login: React.FC = () => {
 
                     {/* Título de bienvenida */}
                     <div className="mb-8 text-center">
-                        <h4 className="font-monserrat text-black text-2xl md:text-[32px]">
+                        <h4 className="font-montserrat text-black text-2xl md:text-[32px]">
                             <b>¡Hola! 👋</b>
                         </h4>
-                        <h4 className="font-monserrat text-black text-2xl md:text-[32px]">
+                        <h4 className="font-montserrat text-black text-2xl md:text-[32px]">
                             <b>Te damos la bienvenida</b>
                         </h4>
                     </div>
 
                     {/* Campo de email */}
-                    <div className="font-monserrat flex flex-col gap-2">
+                    <div className="font-montserrat flex flex-col gap-2">
                         <label htmlFor="email">Correo electrónico</label>
                         <InputText
                             {...register("email")}
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
                     </div>
 
                     {/* Campo de contraseña */}
-                    <div className="font-monserrat flex flex-col gap-2">
+                    <div className="font-montserrat flex flex-col gap-2">
                         <label htmlFor="password">Contraseña</label>
                         <Controller
                             name="password"
@@ -107,11 +107,11 @@ const Login: React.FC = () => {
                     {/* Enlace al registro */}
                     <Link
                         to="/register"
-                        className="w-full font-monserrat text-center text-gray-600 text-lg mt-4"
+                        className="w-full font-montserrat text-center text-gray-600 text-lg mt-4"
                         aria-label="Registrarse"
                     >
                         ¿No tienes una cuenta?{" "}
-                        <span className="font-monserrat text-red-600 hover:underline">
+                        <span className="font-montserrat text-red-600 hover:underline">
                             Regístrate
                         </span>
                     </Link>
